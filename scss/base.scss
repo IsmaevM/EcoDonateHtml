@@ -1,0 +1,253 @@
+@import "__variables.scss";
+
+*
+{
+	box-sizing: border-box;
+}
+
+html
+{
+	//scroll-behavior: smooth;
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	
+	min-width: 320px;
+}
+
+h1, h2, h3, span
+{
+	margin: 0;
+	padding: 0;
+}
+
+a
+{
+	//color: inherit;
+}
+a, a:hover
+{
+	text-decoration: none;
+}
+
+input, select, textarea
+{
+	outline: none !important;
+}
+
+.h72
+{
+	font-family: $font-family1;
+	font-size: 72px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 135%; /* 97.2px */
+	letter-spacing: -1.44px; 
+}
+.h64
+{
+	font-family: $font-family1;
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 80px; /* 125% */
+	letter-spacing: -1.28px; 
+}
+.h56
+{
+	font-family: $font-family1;
+	font-size: 56px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 72px; /* 128.571% */
+	letter-spacing: -1.12px;
+}
+.h40
+{
+	font-family: $font-family1;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 50px; /* 125% */
+	letter-spacing: -0.8px;
+}
+.h32
+{
+	font-family: $font-family1;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 135%; /* 43.2px */
+	letter-spacing: -0.64px; 
+}
+.h24
+{
+	font-family: $font-family1;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 32px; /* 133.333% */
+	letter-spacing: -0.48px;
+}
+.h20
+{
+	font-family: $font-family1;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 28px; /* 140% */
+	letter-spacing: -0.4px;
+}
+.h20-alt
+{
+	font-family: $font-family1;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 28px; /* 140% */
+	letter-spacing: -0.4px;
+}
+.h18-alt
+{
+	font-family: $font-family1;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 24px; /* 133.333% */
+}
+
+.b20
+{
+	font-family: $font-family1;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 24px; /* 120% */ 
+}
+.b16
+{
+	font-family: $font-family1;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 20px; /* 125% */
+}
+
+.p20
+{
+	font-family: $font-family2;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 30px; /* 150% */
+}
+.p18
+{
+	font-family: $font-family2;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 22px; /* 122.222% */
+}
+.p16
+{
+	font-family: $font-family2;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 22px; /* 137.5% */
+}
+
+.p14
+{
+	font-family: $font-family2;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 18px; /* 128.571% */
+}
+
+.p14-alt
+{
+	font-family: Inter;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 18px; /* 128.571% */ 
+}
+
+
+.eco-btn
+{
+	display: flex;
+	padding: 16px 48px;
+	align-items: flex-start;
+	gap: 10px;
+
+	border-radius: 30px;
+	background: $color-orange;
+	color: $color-surface;
+
+	/* b20*/
+	font-family: $font-family1;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 24px; /* 120% */ 
+	
+	border: 0;
+	cursor: pointer;
+	transition: all $transition-time;
+	
+	&:hover
+	{
+		transform: scale(1.05)translate(0, -2px);
+	}
+}
+.eco-btn_sm
+{
+	padding: 14px 24px;
+	
+	background: $color-orange-8;
+	color: var(--orange, #FE7F22); 
+	
+	/* b16 */
+	font-family: $font-family1;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 20px; /* 125% */
+}
+
+.eco-link
+{
+	color: $color-orange;
+
+	cursor: pointer;
+	transition: all $transition-time;
+	
+	&:hover
+	{
+		transform: scale(1.05)translate(0, -2px);
+	}	
+}
+
+.eco-wrapper
+{
+	max-width: 972px; //1400px;
+	margin: 0 auto;	
+	padding: 0 16px;
+	overflow: hidden;
+}
+
+.eco-l
+{
+	text-align: left;
+}
+.eco-r
+{
+	text-align: right;
+}
