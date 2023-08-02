@@ -1136,6 +1136,9 @@ input[type=radio]:checked + .eco-form__amount-button {
   max-width: 940px;
   width: 100%;
 }
+.eco-stats__table tr {
+  width: 100%;
+}
 .eco-stats__table th {
   padding: 16px 32px;
   border-bottom: 1px solid rgba(39, 43, 38, 0.04);
@@ -1144,6 +1147,22 @@ input[type=radio]:checked + .eco-form__amount-button {
   padding: 16px 32px;
   border-top: 1px solid rgba(39, 43, 38, 0.04);
   border-bottom: 1px solid rgba(39, 43, 38, 0.04);
+}
+.eco-stats__table th:nth-child(1),
+.eco-stats__table td:nth-child(1) {
+  width: 50%;
+}
+.eco-stats__table th:nth-child(2),
+.eco-stats__table td:nth-child(2) {
+  width: 20%;
+}
+.eco-stats__table th:nth-child(3),
+.eco-stats__table td:nth-child(3) {
+  width: 20%;
+}
+.eco-stats__table th:nth-child(4),
+.eco-stats__table td:nth-child(4) {
+  width: 20%;
 }
 
 .eco-map {

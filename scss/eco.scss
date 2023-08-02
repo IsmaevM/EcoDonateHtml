@@ -989,17 +989,41 @@
 		max-width: 940px;
 		width: 100%;
 		
+		tr
+		{
+			width: 100%;
+		}
 		th
 		{
 			padding: 16px 32px;
-			border-bottom: 1px solid $color-primary-4;;
+			border-bottom: 1px solid $color-primary-4;
 		}
 		td
 		{
 			padding: 16px 32px;
-			border-top: 1px solid $color-primary-4;;
-			border-bottom: 1px solid $color-primary-4;;
+			border-top: 1px solid $color-primary-4;
+			border-bottom: 1px solid $color-primary-4;
 		}
+		th,
+		td
+		{
+			&:nth-child(1)
+			{
+				width: 50%;
+			}
+			&:nth-child(2)
+			{
+				width: 20%;
+			}
+			&:nth-child(3)
+			{
+				width: 20%;
+			}
+			&:nth-child(4)
+			{
+				width: 20%;
+			}
+		}		
 	}
 }
 

@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function() {
  	$('#eco-hero-cta').click(function(){
 		//document.getElementById('eco-donate').scrollIntoView();
 		scrollTo('eco-donate');
@@ -35,6 +35,19 @@ function scrollTo(aid){
 function GoTo(regionId) {
 	$('.eco-form__select-input').val(regionId);
 	scrollTo('eco-donate');
+}
+
+function Show(regionId) {
+	$('.eco-stats__table > tbody  > tr').each(function(){
+		let c = 'row' + regionId;
+		console.log(c);
+		if ($(this).hasClass('row0') || $(this).hasClass(c)) {
+			$(this).css('display', 'table-row');
+		}
+		else {
+			$(this).css('display', 'none');
+		}
+	});
 }
 
 
