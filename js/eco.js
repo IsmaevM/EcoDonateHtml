@@ -4,9 +4,9 @@ $(document).ready(function(){
 	});
 	$('#amountN').on('input',function(){
 		$(this).prop('checked', false);
-		$('input[name="amount"]').prop('checked', false);
+		$('.eco-form__amount-buttons input[type="radio"]').prop('checked', false);
 	});
-	$('input[name="amount"]').change(function() {
+	$('.eco-form__amount-buttons input[type="radio"]').change(function() {
 		$('#amountN').val('');
 	});
 	$('#eco-form-next').click(function(){
