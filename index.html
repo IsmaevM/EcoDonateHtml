@@ -75,8 +75,8 @@
 									<input type="radio" id="amount5" name="amount" value="5"><label class="eco-form__amount-button p18" for="amount5">5 шт</label><br>
 									<input type="radio" id="amount10" name="amount" value="10"><label class="eco-form__amount-button p18" for="amount10">10 шт</label><br>
 									<input type="radio" id="amount50" name="amount" value="50"><label class="eco-form__amount-button p18" for="amount50">50 шт</label><br>
-									<input type="radio" id="amount100" name="amount" value="100"><label class="eco-form__amount-button p18" for="amount100">100 шт</label><br>
-									<!--<input type="radio" id="amountN" name="amount" value="0"><label class="eco-form__amount-button p18" for="amountN">Другое кол-во</label><br>-->
+									<!--<input type="radio" id="amount100" name="amount" value="100"><label class="eco-form__amount-button p18" for="amount100">100 шт</label><br>-->
+									<input type="number" id="amountN" name="customAmount" placeholder="Другое кол-во" class="eco-form__amount-button p18"><br>
 								</div>
 								<div class="eco-form__row">
 									<div class="eco-form__caption h20">
@@ -558,6 +558,7 @@
 										letter-spacing: -0.02em;
 										text-align: left;
 										fill: #000;
+										user-select: none;
 									}
 									.link
 									{

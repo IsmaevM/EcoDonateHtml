@@ -1,7 +1,13 @@
-$(document).ready(function() {
+$(document).ready(function(){
  	$('#eco-hero-cta').click(function(){
-		//document.getElementById('eco-donate').scrollIntoView();
 		scrollTo('eco-donate');
+	});
+	$('#amountN').on('input',function(){
+		$(this).prop('checked', false);
+		$('input[name="amount"]').prop('checked', false);
+	});
+	$('input[name="amount"]').change(function() {
+		$('#amountN').val('');
 	});
 	$('#eco-form-next').click(function(){
 		$(this).css('display', 'none');
@@ -9,14 +15,14 @@ $(document).ready(function() {
 		$('#eco-form-submit').css('display', '');
 		return false;
 	});
-	$('.eco-leader__mode_top').click(function() {
+	$('.eco-leader__mode_top').click(function(){
 		if ($(this).hasClass('active'))
 			return false;
 		$('.eco-leader__mode_new').removeClass('active');
 		$(this).addClass('active');
 		$('.eco-leader__table').removeClass('modeNewest').addClass('modeTops');
 	});
-	$('.eco-leader__mode_new').click(function() {
+	$('.eco-leader__mode_new').click(function(){
 		if ($(this).hasClass('active'))
 			return false;
 		$('.eco-leader__mode_top').removeClass('active');
@@ -32,16 +38,16 @@ function scrollTo(aid){
 	},'slow');
 }
 
-function GoTo(regionId) {
+function GoTo(regionId){
 	$('.eco-form__select-input').val(regionId);
 	scrollTo('eco-donate');
 }
 
-function Show(regionId) {
+function Show(regionId){
 	$('.eco-stats__table > tbody  > tr').each(function(){
 		let c = 'row' + regionId;
 		console.log(c);
-		if ($(this).hasClass('row0') || $(this).hasClass(c)) {
+		if ($(this).hasClass('row0') || $(this).hasClass(c)){
 			$(this).css('display', 'table-row');
 		}
 		else {
@@ -51,7 +57,7 @@ function Show(regionId) {
 }
 
 
-$(window).on('scroll', function() {
+$(window).on('scroll', function(){
 	animateHero();
 	animateGreen();
 });

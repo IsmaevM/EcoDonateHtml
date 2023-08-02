@@ -409,7 +409,29 @@
 	{
 		background: $color-green;
 		color: $color-surface;
-	} 
+	}
+	
+	//input[id="amountN"]
+	input[type="number"]
+	{
+		border: 0;
+		color: $color-primary;
+		width: 200px;
+		
+		&:active,
+		&:focus,
+		&:not(:placeholder-shown)
+		{
+			background: $color-green;
+			color: $color-surface;
+		}
+		
+		&::placeholder
+		{
+			color: $color-primary;
+			opacity: 1;
+		}
+	}
 	
 	&__row
 	{

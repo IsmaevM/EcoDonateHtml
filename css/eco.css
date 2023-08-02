@@ -415,6 +415,43 @@ input[type=radio]:checked + .eco-form__amount-button {
   background: #27B582;
   color: #FFF;
 }
+.eco-form input[type=number] {
+  border: 0;
+  color: #272B26;
+  width: 200px;
+}
+.eco-form input[type=number]:not(:-moz-placeholder-shown) {
+  background: #27B582;
+  color: #FFF;
+}
+.eco-form input[type=number]:not(:-ms-input-placeholder) {
+  background: #27B582;
+  color: #FFF;
+}
+.eco-form input[type=number]:active, .eco-form input[type=number]:focus, .eco-form input[type=number]:not(:placeholder-shown) {
+  background: #27B582;
+  color: #FFF;
+}
+.eco-form input[type=number]::-webkit-input-placeholder {
+  color: #272B26;
+  opacity: 1;
+}
+.eco-form input[type=number]::-moz-placeholder {
+  color: #272B26;
+  opacity: 1;
+}
+.eco-form input[type=number]:-ms-input-placeholder {
+  color: #272B26;
+  opacity: 1;
+}
+.eco-form input[type=number]::-ms-input-placeholder {
+  color: #272B26;
+  opacity: 1;
+}
+.eco-form input[type=number]::placeholder {
+  color: #272B26;
+  opacity: 1;
+}
 .eco-form__row {
   display: -webkit-box;
   display: -webkit-flex;
