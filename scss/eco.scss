@@ -1168,14 +1168,14 @@
     }
 
     .eco-hero__title {
-        font-size: 6vw;
-        line-height: 8vw;
+        font-size: 50px;
+        line-height: 60px;
     }
 
     .eco-hero__subtitle {
-        font-size: 3vw;
+        font-size: 18px;
         font-weight: 400;
-        line-height: 4vw;
+        line-height: 25px;
     }
 
     .eco-donate__bg {
@@ -1251,6 +1251,10 @@
 }
 
 @media only screen and (max-width: 800px) {
+    .eco-hero__title {
+        font-size: 35px;
+        line-height: 45px;
+    }
     .eco-hero__counter-ct span {
         font-size: 60px;
     }
@@ -1333,7 +1337,25 @@
 
 }
 
+
+@media only screen and (max-width: 640px) {
+	.eco-stats__table th {
+		padding: 14px 20px;
+	}
+	.eco-stats__table td {
+		padding: 14px 20px;
+		font-size: 18px;
+	}
+}
 @media only screen and (max-width: 576px) {
+    .eco-hero__title {
+        font-size: 31px;
+        line-height: 41px;
+    }
+    .eco-hero__subtitle {
+        font-size: 16px;
+        line-height: 22px;
+    }
     .eco-hero__info {
         gap: 25px;
     }
@@ -1367,15 +1389,6 @@
     .eco-contacts__link {
         width: 90px;
     }
-}
-@media only screen and (max-width: 640px) {
-	.eco-stats__table th {
-		padding: 14px 20px;
-	}
-	.eco-stats__table td {
-		padding: 14px 20px;
-		font-size: 18px;
-	}
 }
 @media only screen and (max-width: 520px) {
 	.eco-stats__table th {
@@ -1445,9 +1458,17 @@
 		&__item {
 			width: 100%;
 		}
-		&__info {
-			flex-direction: unset;
-		}
+        &__info {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &__info-left {
+            max-width: 225px;
+            width: 100%;
+        }
+        &__column {
+            width: 100%;
+        }
 		.h24 {
 			font-size: 20px;
 		}
@@ -1464,6 +1485,9 @@
 }
 
 @media only screen and (max-width: 420px) {
+    .eco-hero__counter-ct span {
+        font-size: 45px;
+    }
 	.eco-contacts__main {
 		padding-bottom: 0px;
 	}
