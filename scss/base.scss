@@ -46,6 +46,15 @@ input, select, textarea
 	font-weight: 900;
 	line-height: 135%; /* 97.2px */
 	letter-spacing: -1.44px; 
+	
+	@media screen and (max-width: $screen_M) 
+	{
+		font-size: 48px;
+		font-style: normal;
+		font-weight: 900;
+		line-height: 60px; /* 125% */
+		letter-spacing: -0.96px; 
+	}
 }
 .h64
 {
@@ -53,8 +62,24 @@ input, select, textarea
 	font-size: 64px;
 	font-style: normal;
 	font-weight: 900;
-	line-height: 80px; /* 125% */
-	letter-spacing: -1.28px; 
+	line-height: 1.25; /* 125% */
+	letter-spacing: -1.28px;
+	
+	@media screen and (max-width: $screen_M) 
+	{
+		font-size: 48px;
+		letter-spacing: -0.96px; 		
+		//font-size: 50px; 
+		//line-height: 60px;
+	}
+	@media screen and (max-width: $screen_S) 
+	{
+		font-size: 35px;
+	}
+	@media screen and (max-width: $screen_XS) 
+	{
+		font-size: 31px;
+	}
 }
 .h56
 {
@@ -64,6 +89,15 @@ input, select, textarea
 	font-weight: 900;
 	line-height: 72px; /* 128.571% */
 	letter-spacing: -1.12px;
+	
+	@media screen and (max-width: $screen_M) 
+	{
+		font-size: 32px;
+		font-style: normal;
+		font-weight: 900;
+		line-height: 40px; /* 125% */
+		letter-spacing: -0.64px; 
+	}
 }
 .h40
 {
@@ -73,6 +107,15 @@ input, select, textarea
 	font-weight: 900;
 	line-height: 50px; /* 125% */
 	letter-spacing: -0.8px;
+	
+	@media screen and (max-width: $screen_M) 
+	{
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 900;
+		line-height: 32px; /* 133.333% */
+		letter-spacing: -0.48px; 
+	}
 }
 .h32
 {
@@ -82,6 +125,15 @@ input, select, textarea
 	font-weight: 900;
 	line-height: 135%; /* 43.2px */
 	letter-spacing: -0.64px; 
+	
+	@media screen and (max-width: $screen_M) 
+	{
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 900;
+		line-height: 32px; /* 133.333% */
+		letter-spacing: -0.48px; 
+	}
 }
 .h24
 {
@@ -91,6 +143,15 @@ input, select, textarea
 	font-weight: 900;
 	line-height: 32px; /* 133.333% */
 	letter-spacing: -0.48px;
+	
+	@media screen and (max-width: $screen_M) 
+	{
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 900;
+		line-height: 28px; /* 140% */
+		letter-spacing: -0.4px; 
+	}
 }
 .h20
 {
@@ -100,6 +161,15 @@ input, select, textarea
 	font-weight: 900;
 	line-height: 28px; /* 140% */
 	letter-spacing: -0.4px;
+	
+	@media screen and (max-width: $screen_M) 
+	{
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 900;
+		line-height: 20px; /* 125% */
+		letter-spacing: -0.32px; 
+	}
 }
 .h20-alt
 {
@@ -109,6 +179,19 @@ input, select, textarea
 	font-weight: 500;
 	line-height: 28px; /* 140% */
 	letter-spacing: -0.4px;
+	
+	@media screen and (max-width: $screen_M) 
+	{
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 24px; /* 133.333% */ 
+	}
+	@media screen and (max-width: $screen_S) 
+	{
+		font-size: 16px;
+		line-height: 20px;
+	}
 }
 .h18-alt
 {
@@ -117,6 +200,12 @@ input, select, textarea
 	font-style: normal;
 	font-weight: 500;
 	line-height: 24px; /* 133.333% */
+	
+	@media screen and (max-width: $screen_M) 
+	{
+		font-size: 16px;
+		line-height: 22px;
+	}
 }
 
 .b20
@@ -125,7 +214,15 @@ input, select, textarea
 	font-size: 20px;
 	font-style: normal;
 	font-weight: 600;
-	line-height: 24px; /* 120% */ 
+	line-height: 24px; /* 120% */
+
+	@media screen and (max-width: $screen_M) 
+	{
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 22px; /* 122.222% */ 
+	}
 }
 .b16
 {
@@ -134,6 +231,15 @@ input, select, textarea
 	font-style: normal;
 	font-weight: 600;
 	line-height: 20px; /* 125% */
+	
+	@media screen and (max-width: $screen_M) 
+	{
+		font-family: Geologica;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 18px; /* 128.571% */ 
+	}
 }
 
 .p20
@@ -142,15 +248,35 @@ input, select, textarea
 	font-size: 20px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 30px; /* 150% */
+	line-height: 1.5; /* 150% */
+		
+	@media screen and (max-width: $screen_M) 
+	{
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 24px; /* 133.333% */ 
+	}
+	@media screen and (max-width: $screen_XS) 
+	{
+		font-size: 16px;
+		line-height: 20px;
+	}
 }
 .p18
 {
 	font-family: $font-family2;
 	font-size: 18px;
 	font-style: normal;
-	font-weight: 400;
+	//font-weight: 400;
+	font-weight: 600;
 	line-height: 22px; /* 122.222% */
+
+	@media screen and (max-width: $screen_M) 
+	{
+		font-size: 16px;
+		line-height: 20px;
+	}
 }
 .p16
 {
@@ -159,6 +285,14 @@ input, select, textarea
 	font-style: normal;
 	font-weight: 400;
 	line-height: 22px; /* 137.5% */
+	
+	@media screen and (max-width: $screen_M) 
+	{
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 18px; /* 128.571% */ 
+	}
 }
 
 .p14
@@ -168,6 +302,14 @@ input, select, textarea
 	font-style: normal;
 	font-weight: 400;
 	line-height: 18px; /* 128.571% */
+	
+	@media screen and (max-width: $screen_M) 
+	{
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 16px; /* 133.333% */ 
+	}
 }
 
 .p14-alt
@@ -177,6 +319,12 @@ input, select, textarea
 	font-style: normal;
 	font-weight: 500;
 	line-height: 18px; /* 128.571% */ 
+	
+	@media screen and (max-width: $screen_M) 
+	{
+		font-size: 12px;
+		line-height: 16px;
+	}
 }
 
 
@@ -239,7 +387,7 @@ input, select, textarea
 {
 	max-width: 972px; //1400px;
 	margin: 0 auto;	
-	padding: 0 16px;
+	padding: 0 20px;
 	overflow: hidden;
 }
 

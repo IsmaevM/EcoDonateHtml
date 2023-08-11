@@ -39,6 +39,11 @@
 	border-radius: 60px;
 	background: $color-primary-4;
 	
+	@media screen and (max-width: $screen_XS) 
+	{
+		top: 18px;
+	}
+
 	&__item
 	{
 		display: flex;
@@ -68,38 +73,28 @@
 {
 	position: relative;
 	text-align: center;
+	z-index: 200;
 		
 	&__logo
 	{
 		display: block;
 		padding-top: 40px;
 		height: 32px;
+		
+		@media screen and (max-width: $screen_XS) 
+		{
+			padding-top: 20px;
+			text-align: left;
+		}
 	}
 	
 	&__main
 	{
 		padding-top: 112px;
-		padding-bottom: 80px;
+		//padding-bottom: 80px;
 		margin: 0 auto;
-		max-width: 62%;
-		
+		//max-width: 62%;
 		overflow: hidden;
-		
-		@media screen and (max-width: $screen_L - 1)
-		{
-			flex-direction: column;
-			max-width: unset;
-			padding-left: 32px;
-			padding-right: 32px;
-		}
-		@media screen and (max-width: $screen_S - 1)
-		{
-			flex-direction: column;
-			max-width: unset;
-			padding-left: 16px;
-			padding-right: 16px;
-		}
-		
 	}
 	&__title
 	{
@@ -158,15 +153,22 @@
 	}
 }
 
+$bg-pos: 419px;
+$bg-top: 495px;
+
 .eco-donate
 {
 	position: relative;
 	overflow: visible;
+	z-index: 100;
 		
 	&__bg
 	{
-		position: relative;
-		height: 914px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 100%; //914px;
 		overflow: hidden;
 	}
 		
@@ -175,7 +177,8 @@
 		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: 419px;
+		//bottom: $bg-pos;
+		top: $bg-top - 392.075px;
 		background-image: url('../img/green/1 Center Back.webp');
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -188,7 +191,8 @@
 	{
 		position: absolute;
 		right: 0;
-		bottom: 419px;
+		//bottom: $bg-pos;
+		top: $bg-top - 471.509px;
 		background-image: url('../img/green/2 Right Back.webp');
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -201,7 +205,8 @@
 	{
 		position: absolute;
 		left: 0;
-		bottom: 419px;
+		//bottom: $bg-pos;
+		top: $bg-top - 418.422px;
 		background-image: url('../img/green/3 Left Back.webp');
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -214,7 +219,8 @@
 	{
 		position: absolute;
 		right: 0;
-		bottom: 419px;
+		//bottom: $bg-pos;
+		top: $bg-top - 310.568px;
 		background-image: url('../img/green/4 Right Middle.webp');
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -227,7 +233,8 @@
 	{
 		position: absolute;
 		left: 0;
-		bottom: 419px;
+		//bottom: $bg-pos;
+		top: $bg-top - 415.702px;;
 		background-image: url('../img/green/5 Left Middle.webp');
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -240,7 +247,8 @@
 	{
 		position: absolute;
 		left: 0;
-		bottom: 419px;
+		//bottom: $bg-pos;
+		top: $bg-top - 287.091px;
 		background-image: url('../img/green/6 Center Middle.webp');
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -253,7 +261,8 @@
 	{
 		position: absolute;
 		left: 0;
-		bottom: 419px;
+		//bottom: $bg-pos;
+		top: $bg-top - 202px;
 		background-image: url('../img/green/7 Left Front.webp');
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -266,7 +275,8 @@
 	{
 		position: absolute;
 		left: 0;
-		bottom: 419px;
+		//bottom: $bg-pos;
+		top: $bg-top - 268px;
 		background-image: url('../img/green/8 Trees Left Back.webp');
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -278,7 +288,8 @@
 	{
 		position: absolute;
 		right: 0;
-		bottom: 419px;
+		//bottom: $bg-pos;
+		top: $bg-top - 311px;
 		background-image: url('../img/green/8 Trees Right Back.webp');
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -290,7 +301,8 @@
 	{
 		position: absolute;
 		left: 0;
-		bottom: 419px;
+		//bottom: $bg-pos;
+		top: $bg-top - 176px;
 		background-image: url('../img/green/9 Trees Left Front.webp');
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -302,7 +314,8 @@
 	{
 		position: absolute;
 		right: 0;
-		bottom: 419px;
+		//bottom: 419px;
+		top: $bg-top - 238px;
 		background-image: url('../img/green/9 Trees Right Front.webp');
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -316,7 +329,9 @@
 		left: 0;
 		bottom: 0;
 		right: 0;		
-		height: 479px; 
+		//height: 479px; 
+		top: 435px;
+		
 		background-image: url('../img/green/10 Front.webp');
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -324,14 +339,15 @@
 
 	&__form-container
 	{
-		position: absolute;
-		top: 172px; //204px;
-		left: 0;
-		right: 0;
-		padding-top: 32px;
-		padding-left: 8px;
-		padding-right: 8px;
-		padding-bottom: 8px;
+		//position: absolute;
+		//top: 172px; //204px;
+		//left: 0;
+		//right: 0;
+		//padding-top: 32px;
+		//padding-left: 8px;
+		//padding-right: 8px;
+		padding-top: 180px;
+		padding-bottom: 88px;
 	}
 }
 
@@ -342,7 +358,8 @@
 	z-index: 100;
 	
 	display: flex;
-	width: 780px;
+	max-width: 780px;
+	overflow: hidden;
 	padding: 56px 32px;
 	flex-direction: column;
 	align-items: center;
@@ -356,12 +373,33 @@
 	
 	color: $color-primary;
 	
+	@media screen and (max-width: $screen_M) 
+	{
+		padding: 32px;
+		gap: 32px;
+	}
+	@media screen and (max-width: $screen_S) 
+	{
+		padding: 20px;
+		gap: 20px;
+	}
+	
 	&__main
 	{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 32px;
+		max-width: 100%;
+		
+		@media screen and (max-width: $screen_M) 
+		{
+			gap: 20px;
+		}
+		@media screen and (max-width: $screen_S) 
+		{
+			gap: 16px;
+		}
 	}
 	
 	&__title,
@@ -377,12 +415,15 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 20px;
+		max-width: 100%;
 	}
 	
 	&__amount-buttons
 	{
 		display: flex;
 		align-items: flex-start;
+		justify-content: center;
+		flex-wrap: wrap;
 		gap: 8px;
 	}
 	&__amount-button
@@ -439,14 +480,16 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 14px;
+		width: 100%;
 	}
 	&__caption
 	{
 		color: $color-primary;
+		text-align: center;
 	}
 	&__input
 	{
-	
+		max-width: 100%;
 	}	
 	
 	&__part2
@@ -454,7 +497,8 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 16px; 
+		gap: 16px;
+		max-width: 100%;
 	}
 	
 	&__row2
@@ -463,12 +507,19 @@
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 8px;
+		max-width: 100%;
 	}
 
+	&__select-container
+	{
+		max-width: 100%;
+	}
 	&__select-input
 	{
 		display: flex;
+		max-width: 100%;
 		width: 462px;
+		max-width: 100%;
 		padding: 16px 16px 16px 24px;
 		justify-content: space-between;
 		align-items: flex-start; 
@@ -496,12 +547,18 @@
 		background-repeat: no-repeat;
 		background-position: right 16px top 50%;
 		background-size: 10px auto;
+		
+		@media screen and (max-width: $screen_S - 1) 
+		{
+			padding: 12px 12px 12px 20px;
+		}
 	}
 	
 	&__text-input
 	{
 		display: flex;
 		width: 462px;
+		max-width: 100%;
 		padding: 17px 16px 17px 24px;
 		align-items: flex-start;
 		gap: 56px;
@@ -519,6 +576,11 @@
 		font-style: normal;
 		font-weight: 400;
 		line-height: 22px; /* 122.222% */ 
+		
+		@media screen and (max-width: $screen_S - 1) 
+		{
+			padding: 12px 12px 12px 20px;
+		}
 	}
 	
 	&__validation
@@ -539,12 +601,22 @@
 	{
 		padding-top: 80px;
 		text-align: center; 
+		
+		@media screen and (max-width: $screen_S - 1) 
+		{
+			padding-top: 40px;
+		}
 	}
 		
 	&__container
 	{
 		padding-top: 40px;
 		margin: 0 auto;
+		
+		@media screen and (max-width: $screen_S - 1) 
+		{
+			padding-top: 32px;
+		}
 	}
 	
 	&__main
@@ -644,6 +716,11 @@
 		
 		background: $color-surface;
 		
+		@media screen and (max-width: $screen_S - 1) 
+		{
+			padding: 16px;
+		}
+		
 		&_top
 		{
 			display: none;
@@ -662,6 +739,13 @@
 				display: flex;
 			}
 		}
+		
+		@media screen and (max-width: $screen_XS) 
+		{
+			flex-direction: column;
+			align-items: flex-start;
+			//gap: 8px;
+		}
 	}
 	&__row-left
 	{
@@ -677,6 +761,40 @@
 		align-items: flex-end;
 		gap: 2px;
 	}
+	&__row-m-1
+	{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+		width: 100%;	
+	}
+	&__row-m-2
+	{
+		display: flex;
+		align-items: end;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 8px;
+		width: 100%;
+	}
+	&__row-left,
+	&__row-right
+	{
+		@media screen and (max-width: $screen_XS) 
+		{
+			display: none;
+		}
+	}
+	&__row-m-1,
+	&__row-m-2
+	{
+		@media screen and (min-width: $screen_XS + 1) 
+		{
+			display: none;
+		}
+	}
+	
 	&__userpic
 	{
 		position: relative;
@@ -694,6 +812,10 @@
 			width: 100%;
 			line-height: 61px;
 		}
+	}
+	&__sender
+	{
+		flex-grow: 1;
 	}
 	&__texts
 	{
@@ -713,6 +835,11 @@
 	{
 		//display: block;
 		color: $color-primary;
+		
+		@media screen and (max-width: $screen_XS) 
+		{
+			margin-top: 8px;
+		}	
 	}
 	&__counter
 	{
@@ -729,6 +856,11 @@
 	{
 		color: $color-secondary;
 		text-align: right;
+		
+		@media screen and (max-width: $screen_XS) 
+		{
+			margin-left: auto;
+		}
 	}
 	
 	&__btn-ct
@@ -815,6 +947,11 @@
 		//overflow: hidden;
 		
 		width: 100%;
+		
+		@media screen and (max-width: $screen_S - 1) 
+		{
+			padding: 40px 0px;
+		}
 	}
 	
 	&__title
@@ -842,6 +979,11 @@
 		
 		//Temp
 		flex-direction: column;
+		
+		@media screen and (max-width: $screen_S - 1)
+		{
+			width: 100%;
+		}
 	}
 	
 	&__item
@@ -865,6 +1007,15 @@
 		&:hover
 		{
 			transform: scale(1.01)translate(0, -2px);
+		}
+		
+		@media screen and (max-width: $screen_M - 1)
+		{
+			padding: 20px 20px 16px 20px;
+		}
+		@media screen and (max-width: $screen_S - 1)
+		{
+			width: 100%;
 		}
 	}
 	&__inner
@@ -1011,24 +1162,34 @@
 		max-width: 940px;
 		width: 100%;
 		
+		
+		@media screen and (max-width: $screen_S - 1) 
+		{
+			overflow-x: auto;
+		}
+		
 		tr
 		{
 			width: 100%;
 		}
 		th
 		{
-			padding: 16px 32px;
 			border-bottom: 1px solid $color-primary-4;
 		}
 		td
 		{
-			padding: 16px 32px;
 			border-top: 1px solid $color-primary-4;
 			border-bottom: 1px solid $color-primary-4;
 		}
 		th,
 		td
 		{
+			padding: 16px 32px;
+			@media screen and (max-width: $screen_S - 1) 
+			{
+				padding: 8px 16px;
+			}
+			
 			&:nth-child(1)
 			{
 				width: 50%;
@@ -1052,6 +1213,12 @@
 .eco-map
 {
 	text-align: center;
+	
+	> svg
+	{
+		max-width: 100%;
+		height: auto;
+	}
 }
 
 .eco-clouds
@@ -1076,7 +1243,15 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 32px;
-
+		
+		@media screen and (max-width: $screen_M - 1) 
+		{
+			padding: 40px 0px 90px;
+		}
+		@media screen and (max-width: $screen_S - 1) 
+		{
+			padding: 32px 0px;
+		}
 	}
 	&__title
 	{
