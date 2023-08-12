@@ -46,7 +46,6 @@ function GoTo(regionId){
 function Show(regionId){
 	$('.eco-stats__table > tbody  > tr').each(function(){
 		let c = 'row' + regionId;
-		console.log(c);
 		if ($(this).hasClass('row0') || $(this).hasClass(c)){
 			$(this).css('display', 'table-row');
 		}

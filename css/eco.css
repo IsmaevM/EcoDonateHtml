@@ -858,9 +858,9 @@ input[type=radio]:checked + .eco-form__amount-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
-  -webkit-align-items: end;
+  -webkit-align-items: flex-end;
       -ms-flex-align: end;
-          align-items: end;
+          align-items: flex-end;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -1055,6 +1055,11 @@ input[type=radio]:checked + .eco-form__amount-button {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 766px) {
+  .eco-news__grid {
+    width: 100%;
   }
 }
 .eco-news__column {
